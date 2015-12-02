@@ -1,0 +1,22 @@
+﻿<div ng-controller="Shell as vm">
+
+    <header>
+        <div ng-include="'app/layout/topnav.html'"></div>
+    </header>
+
+    <section id="content" class="poem container">
+        <h1>Hypertext Version of "The Hollow Men"</h1>
+
+        <div ng-include="'app/poem/poemtext.html'" class="poemtext col-lg-6 col-med-6 col-sm-6 ">
+        </div>
+        <div ng-include="'app/poem/poemnotes.html'" class="poemnotes col-lg-5 col-med-5 col-sm-5 ">
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <div ng-include="'app/layout/footer.html'"></div>
+    </footer>
+</div>
+
+
