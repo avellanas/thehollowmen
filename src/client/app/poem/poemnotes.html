@@ -1,5 +1,5 @@
 <div class="notesscroll">
-    <section class="note" id="title">
+    <section class="note" id="title" ng-show="vm.isVisible('title')">
         <h3>Title</h3>
 
         <p>Eliot claimed to have made up the title, "The Hollow Men" from
@@ -11,18 +11,17 @@
             Conrad's Kurtz as hollow in some way (a 'hollow sham', 'hollow at the core').
             The title immediately presents us with the first of many allusions, directly
             referencing two of the four main sources for this poem, Shakespeare's <i><a
-                    ng-click="vm.scroll('juliuscaesar')">Julius
-                Caesar</a>,</i> and Conrad's <i><a ng-click="vm.scroll('heartofdarkness')">Heart of Darkness</a></i>
+                    ng-click="vm.showNote('juliuscaesar')">Julius
+                Caesar</a>,</i> and Conrad's <i><a ng-click="vm.showNote('heartofdarkness')">Heart of Darkness</a></i>
             (which I will often abbreviate <i>HoD</i>). The other sources are
-            the <a ng-click="vm.scroll('gunpowderplot')">Gunpowder Plot</a> and <i><a
-                    ng-click="vm.scroll('divinecomedy')">The
+            the <a ng-click="vm.showNote('gunpowderplot')">Gunpowder Plot</a> and <i><a
+                    ng-click="vm.showNote('divinecomedy')">The
                 Divine Comedy</a></i>, both of which also deal with men or shadows of men
             who may be described as hollow at the core.
         </p>
     </section>
 
-    <hr WIDTH="100%">
-    <section id="gunpowderplot">
+    <section class="note" id="gunpowderplot" ng-show="vm.isVisible('gunpowderplot')">
         <h3>Gunpowder Plot</h3>
 
         <p><a href="http://www.gunpowder-plot.org">This
@@ -45,8 +44,7 @@
         </p>
     </section>
 
-    <hr WIDTH="100%">
-    <section id="juliuscaesar">
+    <section class="note" id="juliuscaesar" ng-show="vm.isVisible('juliuscaesar')">
         <h3><i>Julius Caesar</i></h3>
 
         <p><a href="http://tech-two.mit.edu/Shakespeare/julius_caesar/index.html">Shakespeare's version</a> of the
@@ -61,8 +59,7 @@
         </p>
     </section>
 
-    <hr WIDTH="100%">
-    <section id="divinecomedy">
+    <section class="note" id="divinecomedy" ng-show="vm.isVisible('divinecomedy')">
         <h3><i>The Divine Comedy</i></h3>
 
         <p><i><a href="http://www.divinecomedy.org/divine_comedy.html">The Divine
@@ -75,8 +72,7 @@
             desire to join her there again after his own death.
         </p>
     </section>
-    <hr WIDTH="100%">
-    <section id="heartofdarkness">
+    <section class="note" id="heartofdarkness" ng-show="vm.isVisible('heartofdarkness')">
         <h3><i>Heart of Darkness</i></h3>
 
         <p>Next to Dante's writing, <i><a
@@ -92,8 +88,7 @@
             the true horror of what he and humanity as he knows it is and does.
         </p>
     </section>
-    <hr WIDTH="100%">
-    <section id="1925">
+    <section class="note" id="1925" ng-show="vm.isVisible('1925')">
         <h3>1925</h3>
 
         <p>Eliot wrote this poem during a period of absence from the bank,
@@ -103,8 +98,7 @@
                     href="Footnotes.htm#Notesone">1</a></font></sup>
         </p>
     </section>
-    <hr WIDTH="100%">
-    <section id="epigraph1">
+    <section class="note" id="epigraph1" ng-show="vm.isVisible('epigraph1')">
         <h3>Epigraph 1</h3>
 
         <p>The words spoken by a servant to announce Kurtz's
@@ -115,8 +109,7 @@
         </p>
     </section>
 
-    <hr WIDTH="100%">
-    <section id="epigraph2">
+    <section class="note" id="epigraph2" ng-show="vm.isVisible('epigraph2')">
         <h3>Epigraph 2</h3>
 
         <p>A version of 'A penny for the Guy?', the cry children
@@ -124,8 +117,7 @@
         </p>
     </section>
 
-    <hr WIDTH="100%">
-    <section id="onefour">
+    <section class="note" id="onefour" ng-show="vm.isVisible('onefour')">
         <h3>ll.1-4</h3>
 
         <p>The 'hollow men' and 'stuffed men', 'filled with straw' are
@@ -134,16 +126,14 @@
             modern man, an empty, corrupt breed.
         </p>
     </section>
-    <hr WIDTH="100%">
-    <section id="two">
+    <section class="note" id="two" ng-show="vm.isVisible('two')">
 
         <p>l. 2: According to Valerie Eliot, the marionette in Stravinsky's <a
                 href="http://balletdance.about.com/arts/balletdance/library/weekly/aa112398.htm"><i>Petrouchka</i>.</a><sup><font
                 size=-2><a href="Footnotes.htm#notestwo">2</a></font></sup>
         </p>
     </section>
-    <hr WIDTH="100%">
-    <section id="four">
+    <section class="note" id="four" ng-show="vm.isVisible('four')">
 
         <p>l. 4: Straw is the usual filling for the effigies burned on <a
                 href="http://web.idirect.com/~redsonja/guy/">Guy
@@ -172,11 +162,10 @@
             and the Greek myth of Persephone and Demeter.
         </p>
     </section>
-    <hr WIDTH="100%">
-    <section id="six">
+    <section class="note" id="six" ng-show="vm.isVisible('six')">
 
         <p>l. 6: Whispers act as an instrument of fate throughout
-            <i><a ng-click="vm.scroll('heartofdarkness')">HoD</a></i>.
+            <i><a ng-click="vm.showNote('heartofdarkness')">HoD</a></i>.
             Marlow recounts how the wilderness "had whispered to [Kurtz] things about
             himself which he did not know ... and the whisper proved irresistibly fascinating.
             It echoed loudly within him because he was hollow at the core".<sup><font size=-2><a
@@ -188,11 +177,10 @@
             throughout this poem and seemingly inherent in the hollow men.
         </p>
     </section>
-    <hr WIDTH="100%">
-    <section id="eleventwelve">
+    <section class="note" id="eleventwelve" ng-show="vm.isVisible('eleventwelve')">
 
         <p>ll. 11-12: This refers to a condition of unfulfillment as seen in the
-            spiritual state of the shades in <i><a ng-click="vm.scroll('divinecomedy')">Inferno iii</a></i>.
+            spiritual state of the shades in <i><a ng-click="vm.showNote('divinecomedy')">Inferno iii</a></i>.
             These shades never made a choice regarding their spiritual state during
             life (neither following nor rebelling against God) instead living solely
             for themselves. Neither heaven nor hell will let them past its gates.
@@ -205,8 +193,7 @@
             of life and death.
         </p>
     </section>
-    <hr WIDTH="100%">
-    <section id="thirteenfifteen">
+    <section class="note" id="thirteenfifteen" ng-show="vm.isVisible('thirteenfifteen')">
 
         <p>ll. 13-15: Those who have crossed to death's other kingdom are those
             who have left behind a state of spiritual nothingness (or, alternatively,
@@ -225,16 +212,14 @@
             but simply lacked what the lucky ones have, morals and values.
         </p>
     </section>
-    <hr WIDTH="100%">
-    <section id="fifteen">
+    <section class="note" id="fifteen" ng-show="vm.isVisible('fifteen')">
 
         <p>l. 15: The song sung by children begging for pennies on <a href="http://web.idirect.com/~redsonja/guy/">Guy
             Fawkes Day</a> begins "Please to remember / The fifth of November / Gunpowder,
             treason, and plot."
         </p>
     </section>
-    <hr WIDTH="100%">
-    <section id="nineteen">
+    <section class="note" id="nineteen" ng-show="vm.isVisible('nineteen')">
 
         <p>l. 19: Beatrice tells Dante how she came to him first in dreams to lead
             him back to the part of virtue. Just as Beatrice give Dante a chance
@@ -242,8 +227,7 @@
             chance for redemption.
         </p>
     </section>
-    <hr WIDTH="100%">
-    <section id="nineteentwentytwo">
+    <section class="note" id="nineteentwentytwo" ng-show="vm.isVisible('nineteentwentytwo')">
 
         <p>ll. 19-22: Dante cannot meet Beatrice's eyes when he first sees her
             because he still feels shame and suffers their reprove. He acts like
@@ -258,8 +242,7 @@
             This is an opportunity Dante the pilgrim accepted and Marlow refused.
         </p>
     </section>
-    <hr WIDTH="100%">
-    <section id="twentytwentytwo">
+    <section class="note" id="twentytwentytwo" ng-show="vm.isVisible('twentytwentytwo')">
 
         <p>ll. 20-22: In heaven, Dante no longer feels shamed by Beatrice's gaze,
             but instead, marvels in her beauty, which continues to grow as they advance
@@ -272,31 +255,27 @@
             he sees a gaze that he can meet.
         </p>
     </section>
-    <hr WIDTH="100%">
-    <section id="twentythreetwentyeight">
+    <section class="note" id="twentythreetwentyeight" ng-show="vm.isVisible('twentythreetwentyeight')">
 
         <p>ll. 23-28: These lines resemble the Dante's description of the Earthly
             Paradise, when still seen from afar in Cantos <i>xxvii-xxix</i>.
             Dante used the star as a symbol representing God or Mary.
         </p>
     </section>
-    <hr WIDTH="100%">
-    <section id="twentythree">
+    <section class="note" id="twentythree" ng-show="vm.isVisible('twentythree')">
 
         <p>l. 23: A broken column is a traditional graveyard memorial for a premature
             death.
         </p>
     </section>
-    <hr WIDTH="100%">
-    <section id="twentyfour">
+    <section class="note" id="twentyfour" ng-show="vm.isVisible('twentyfour')">
 
         <p>l. 24: A book Eliot reviewed in 1923, <i>The Sacred Dance</i> by W.O.E.
             Oesterley contains the image of a 'savage' who is awestruck by 'a tree,
             swayed by wind, moved'.<sup><font size=-2><a href="Footnotes.htm#notessix">6</a></font></sup>
         </p>
     </section>
-    <hr WIDTH="100%">
-    <section id="thirtytwo">
+    <section class="note" id="thirtytwo" ng-show="vm.isVisible('thirtytwo')">
 
         <p>l. 32: In the section "The Propitiation of Vermin by Farmers" in <i><a
                 href="http://www.bartleby.com/196/">The
@@ -311,26 +290,23 @@
             will have to overcome before that can happen.
         </p>
     </section>
-    <hr WIDTH="100%">
     <br>
-    <section id="thirtythree">
+    <section class="note" id="thirtythree" ng-show="vm.isVisible('thirtythree')">
         <br>l. 33: In <i><a href="http://www.bartleby.com/201/1.html">The Waste Land</a></i>
         Eliot associates the "man with three staves" a card in the Tarot with the
         Fisher King
         </p>
     </section>
-    <hr WIDTH="100%">
-    <section id="thirtyfive">
+    <section class="note" id="thirtyfive" ng-show="vm.isVisible('thirtyfive')">
 
-        <p>l. 35: In the <i><a ng-click="vm.scroll('divinecomedy')">Inferno</a></i> spirits are
-            blown about by the wind and in <i><a ng-click="vm.scroll('heartofdarkness')">HoD</a></i>
+        <p>l. 35: In the <i><a ng-click="vm.showNote('divinecomedy')">Inferno</a></i> spirits are
+            blown about by the wind and in <i><a ng-click="vm.showNote('heartofdarkness')">HoD</a></i>
             the native dies just because he left the shutter open, "He had no restraint-
             just like Kurtz- a tree swayed in the wind."<sup><font size=-2><a
                     href="Footnotes.htm#notesseven">7</a></font></sup>
         </p>
     </section>
-    <hr WIDTH="100%">
-    <section id="thirtyseventhirtyeight">
+    <section class="note" id="thirtyseventhirtyeight" ng-show="vm.isVisible('thirtyseventhirtyeight')">
 
         <p>ll. 37-38: Both Dante the Pilgrim and Marlow must face a meeting they
             greatly fear. Dante must meet Beatrice and face her divine beauty.
@@ -348,8 +324,7 @@
             face between light and darkness.
         </p>
     </section>
-    <hr WIDTH="100%">
-    <section id="thirtyninefortyfour">
+    <section class="note" id="thirtyninefortyfour" ng-show="vm.isVisible('thirtyninefortyfour')">
 
         <p>ll. 39-44: These lines are thought to be material originally discarded
             from <i><a href="http://www.bartleby.com/201/1.html">The Waste Land</a></i>
@@ -363,15 +338,13 @@
             world.
         </p>
     </section>
-    <hr WIDTH="100%">
-    <section id="fortyseven">
+    <section class="note" id="fortyseven" ng-show="vm.isVisible('fortyseven')">
 
-        <p>l. 47: <i><a ng-click="vm.scroll('heartofdarkness')">HoD</a></i>: "We live, as we dream
+        <p>l. 47: <i><a ng-click="vm.showNote('heartofdarkness')">HoD</a></i>: "We live, as we dream
             - alone."<sup><font size=-2><a href="Footnotes.htm#notesnine">9</a></font></sup>
         </p>
     </section>
-    <hr WIDTH="100%">
-    <section id="fortyninefiftyone">
+    <section class="note" id="fortyninefiftyone" ng-show="vm.isVisible('fortyninefiftyone')">
 
         <p>ll. 49-51: To the end, Kurtz's Intended is confident in his faithfulness,
             goodness, and unending love for her, while in reality he has turned to
@@ -379,18 +352,16 @@
             non-Christian worship).
         </p>
     </section>
-    <hr WIDTH="100%">
-    <section id="fiftyfiftyone">
+    <section class="note" id="fiftyfiftyone" ng-show="vm.isVisible('fiftyfiftyone')">
 
         <p>ll. 50-51: A perversion of Juliet's line about "lips that they must
             use in prayer" instead of for kissing. Kurtz's lips are being used
             in pagan worship instead of to express love for his Intended. Also,
-            from Psalm 57, as used in <i><a ng-click="vm.scroll('divinecomedy')">Purgatorio xxii, xxxiii</a>,</i>
+            from Psalm 57, as used in <i><a ng-click="vm.showNote('divinecomedy')">Purgatorio xxii, xxxiii</a>,</i>
             "Lord, open thou my lips; and my mouth shall show forth thy praise!"
         </p>
     </section>
-    <hr WIDTH="100%">
-    <section id="fiftytwofiftysix">
+    <section class="note" id="fiftytwofiftysix" ng-show="vm.isVisible('fiftytwofiftysix')">
 
         <p>ll. 52-56: The valley Marlow walks through upon his arrival to the Congo,
             half excavated, littered with abandoned objects, and hopeless native laborers,
@@ -399,13 +370,12 @@
             clinging to the earth, half coming out, half effaced with in the dim light,
             in all the attitudes of pain, abandonment, and despair."<sup><font size=-2><a
                     href="Footnotes.htm#notesten">10</a></font></sup>
-            Like <a ng-click="vm.scroll('thirtyninefortyfour')">ll. 39-44</a>, a representation of
+            Like <a ng-click="vm.showNote('thirtyninefortyfour')">ll. 39-44</a>, a representation of
             the sterile, modern world, a place where the eyes that offer hope and shame
             don't exist.
         </p>
     </section>
-    <hr WIDTH="100%">
-    <section id="fiftysix">
+    <section class="note" id="fiftysix" ng-show="vm.isVisible('fiftysix')">
 
         <p>l. 56: Possibly the "new jaw bone of an ass" (Judges xv, 15-19) with
             which Samson slew a thousand Philistines. This would seem to signify
@@ -418,14 +388,13 @@
             have taken from the talisman is no longer available.
         </p>
     </section>
-    <hr WIDTH="100%">
-    <section id="fiftysevensixty">
+    <section class="note" id="fiftysevensixty" ng-show="vm.isVisible('fiftysevensixty')">
 
         <p>ll. 57-60: These lines allude to all four major sources: the last meeting
             places and tumid rivers encountered by the Pilgrim on his journey, the
             element of conspiracy (last meetings before the treasonous act) in <i><a
-                    ng-click="vm.scroll('juliuscaesar')">Julius
-                Caesar</a></i> and of the <a ng-click="vm.scroll('gunpowderplot')">Gunpowder Plot</a>,
+                    ng-click="vm.showNote('juliuscaesar')">Julius
+                Caesar</a></i> and of the <a ng-click="vm.showNote('gunpowderplot')">Gunpowder Plot</a>,
             and Marlow's experiences with the secretive trading company, "It was just
             as though I had been let into some conspiracy."<sup><font size=-2><a
                     href="Footnotes.htm#noteseleven">11</a></font></sup>
@@ -438,15 +407,13 @@
             hollow souls before they sentenced to the inferno.
         </p>
     </section>
-    <hr WIDTH="100%">
-    <section id="sixty">
+    <section class="note" id="sixty" ng-show="vm.isVisible('sixty')">
 
         <p>l. 60: Dante's River Acheron flowing around hell or the river Marlow
             follows into the African 'heart of darkness'.
         </p>
     </section>
-    <hr WIDTH="100%">
-    <section id="sixtyonesixtytwo">
+    <section class="note" id="sixtyonesixtytwo" ng-show="vm.isVisible('sixtyonesixtytwo')">
 
         <p>ll. 61-62:<b> </b>If the eyes reappear, so does hope and the possibility
             for salvation. At Dante the Pilgrim's first meeting with Beatrice,
@@ -463,18 +430,16 @@
             modern life.
         </p>
     </section>
-    <hr WIDTH="100%">
-    <section id="sixtyfoursixtythree">
+    <section class="note" id="sixtyfoursixtythree" ng-show="vm.isVisible('sixtyfoursixtythree')">
 
-        <p>ll. 63-64: In <i><a ng-click="vm.scroll('divinecomedy')">Paradiso xxx</a></i> the Pilgrim's
+        <p>ll. 63-64: In <i><a ng-click="vm.showNote('divinecomedy')">Paradiso xxx</a></i> the Pilgrim's
             vision of the highest level of heaven is of a rose whose petals are formed
-            by Mary and the saints. In <i><a ng-click="vm.scroll('divinecomedy')">Paradiso xxxi</a></i>
-            he refers to God as the 'single star', and in <i><a ng-click="vm.scroll('divinecomedy')">Paradiso
+            by Mary and the saints. In <i><a ng-click="vm.showNote('divinecomedy')">Paradiso xxxi</a></i>
+            he refers to God as the 'single star', and in <i><a ng-click="vm.showNote('divinecomedy')">Paradiso
                 xxxii</a></i> and elsewhere he refers to Mary as a rose.
         </p>
     </section>
-    <hr WIDTH="100%">
-    <section id="sixtyfive">
+    <section class="note" id="sixtyfive" ng-show="vm.isVisible('sixtyfive')">
 
         <p>l. 65: The twilight refers to Marlow's meeting with Kurtz's Intended,
             to the twilight that is physically gathering, and to the hopelessness in
@@ -482,8 +447,7 @@
             be the mere memory of that choice.
         </p>
     </section>
-    <hr WIDTH="100%">
-    <section id="sixtyeightseventy">
+    <section class="note" id="sixtyeightseventy" ng-show="vm.isVisible('sixtyeightseventy')">
 
         <p>ll. 68-71: These lines parody a children's song that is derived from
             a fertility dance done around a mulberry bush 'on a cold and frosty
@@ -500,8 +464,7 @@
             it can bring.
         </p>
     </section>
-    <hr WIDTH="100%">
-    <section id="seventytwoninety">
+    <section class="note" id="seventytwoninety" ng-show="vm.isVisible('seventytwoninety')">
 
         <p>ll. 72-90: Taken almost directly from <a
                 href="http://tech-two.mit.edu/Shakespeare/julius_caesar/julius_caesar.2.1.html"><i>Julius
@@ -534,8 +497,7 @@
             that chance or failed to choose between the two.
         </p>
     </section>
-    <hr WIDTH="100%">
-    <section id="seventysix">
+    <section class="note" id="seventysix" ng-show="vm.isVisible('seventysix')">
 
         <p>l. 76: In 1935 Eliot accepted a suggestion that he had taken the 'Shadow'
             from "Non sum qualis eram" (I am not now as once I was) Ernest Dowson's
@@ -545,7 +507,7 @@
             lines... have always run in my head."<sup><font size=-2><a
                     href="Footnotes.htm#notessixteen">16</a></font></sup>
 
-            <i><a ng-click="vm.scroll('heartofdarkness')">HoD</a></i> also features shadows throughout:
+            <i><a ng-click="vm.showNote('heartofdarkness')">HoD</a></i> also features shadows throughout:
             the boat moves in shadow, men die with shadows across their faces, pain
             is experienced in shadow, Kurtz's secrets are metaphorical shadows, Kurtz
             himself is a "Shadow - that wandering and tormented thing,"<sup><font size=-2><a
@@ -554,39 +516,34 @@
             over all of mankind.
         </p>
     </section>
-    <hr WIDTH="100%">
-    <section id="seventyseven">
+    <section class="note" id="seventyseven" ng-show="vm.isVisible('seventyseven')">
 
         <p>l. 77: Part of the Lord's Prayer, as originally mentioned in I Chronicles
             xxix.
         </p>
     </section>
-    <hr WIDTH="100%">
-    <section id="eightythree">
+    <section class="note" id="eightythree" ng-show="vm.isVisible('eightythree')">
 
-        <p>l. 83: Like <a ng-click="vm.scroll('seventyseven')">l. 77 and l. 91</a>, this line is
+        <p>l. 83: Like <a ng-click="vm.showNote('seventyseven')">l. 77 and l. 91</a>, this line is
             italicized, suggesting a quotation. In this case it is from Conrad's <i>An
                 Outcast of the Islands</i>, in which a broken man is punished by being
             kept alive rather than by being killed.
         </p>
     </section>
-    <hr WIDTH="100%">
-    <section id="eightysixeightyseven">
+    <section class="note" id="eightysixeightyseven" ng-show="vm.isVisible('eightysixeightyseven')">
 
         <p>ll. 86-87: From Aristotelian philosophy, "matter only has potency until
             form gives it existence".
         </p>
     </section>
-    <hr WIDTH="100%">
-    <section id="eightyeighteightynine">
+    <section class="note" id="eightyeighteightynine" ng-show="vm.isVisible('eightyeighteightynine')">
 
         <p>ll. 88-89: From Platonic philosophy, "the essence is the inapprehensible
             ideal, which finds material expression in its descent to the lower, material
             plane of reality."
         </p>
     </section>
-    <hr WIDTH="100%">
-    <section id="ninetyfiveninetyeight">
+    <section class="note" id="ninetyfiveninetyeight" ng-show="vm.isVisible('ninetyfiveninetyeight')">
 
         <p>ll. 95-98: Here, Eliot is again parodying the children's song 'Here
             we go round the mulberry bush,' specifically the line "this is the way
@@ -596,8 +553,7 @@
             without end. Amen"
         </p>
     </section>
-    <hr WIDTH="100%">
-    <section id="ninetyeight">
+    <section class="note" id="ninetyeight" ng-show="vm.isVisible('ninetyeight')">
 
         <p>l. 98: George Santayana lectured at Harvard while Eliot was a student
             there. His account of the Divine Comedy included: "it all ends, not

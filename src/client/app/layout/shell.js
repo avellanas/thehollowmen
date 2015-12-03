@@ -3,25 +3,21 @@
 
     angular
         .module('app.layout')
-        .controller('Shell', Shell);
+        .controller('Shell', function Shell(config) {
+            var vm = this;
 
-    Shell.$inject = ['$location', '$anchorScroll', 'config'];
+            vm.isVisible = isVisible;
+            vm.selectedNote = 'title';
+            vm.showNote = showNote;
+            vm.title = config.appTitle;
 
-    function Shell($location, $anchorScroll, config) {
-        var vm = this;
+            function showNote(selector) {
+                vm.selectedNote = selector;
+            }
 
-        vm.title = config.appTitle;
-        vm.scroll = scroll;
-
-        function scroll(selector) {
-            console.log('Scrolling to ' + selector);
-
-            // set the location.hash to the id of the element you wish to scroll to.
-            $location.hash(selector);
-
-            $anchorScroll();
-
-        }
-    }
+            function isVisible(note) {
+                return vm.selectedNote === note;
+            }
+        });
 })();
 
