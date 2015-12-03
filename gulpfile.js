@@ -9,6 +9,7 @@ var paths = require('./gulp.config.json');
 var plato = require('plato');
 var plug = require('gulp-load-plugins')();
 var reload = browserSync.reload;
+var runSequence = require('run-sequence');
 
 var colors = plug.util.colors;
 var env = plug.util.env;
@@ -172,7 +173,7 @@ gulp.task('rev-and-inject', ['js', 'vendorjs', 'css', 'vendorcss'], function () 
     var minFilter = plug.filter(['**/*.min.*', '!**/*.map']);
     var indexFilter = plug.filter(['index.html']);
 
-    var stream = gulp
+    return gulp
     // Write the revisioned files
         .src([].concat(minified, index)) // add all built min files and index.html
         .pipe(minFilter) // filter the stream to minified css and js
@@ -214,11 +215,11 @@ gulp.task('rev-and-inject', ['js', 'vendorjs', 'css', 'vendorcss'], function () 
  */
 gulp.task('build', ['rev-and-inject', 'images', 'fonts'], function () {
     log('Building the optimized app');
-
     return gulp.src('').pipe(plug.notify({
         onLast: true,
-        message: 'Deployed code!'
+        message: 'Built code'
     }));
+
 });
 
 /**
@@ -237,7 +238,7 @@ gulp.task('clean', function (cb) {
     log('Cleaning: ' + plug.util.colors.blue(paths.build));
 
     var delPaths = [].concat(paths.build, paths.report);
-    del(delPaths, cb);
+    return del(delPaths, cb);
 });
 
 /**
@@ -322,15 +323,35 @@ gulp.task('serve-dev', function () {
  * serve the build environment
  */
 gulp.task('serve-build', function () {
+    port = process.env.PORT || 7200;
     serve({
         mode: 'build'
     });
+
+    return gulp.src('').pipe(plug.notify({
+        onLast: true,
+        message: 'Deployed code to http://localhost:' + port
+    }));
 });
 
 /**
  * Backwards compatible call to make stage and build equivalent
  */
 gulp.task('serve-stage', ['serve-build'], function () {
+});
+
+/**
+ * Clean and build.
+ */
+gulp.task('clean-build', function (callback) {
+    runSequence('clean', 'build', callback);
+});
+
+/**
+ * Clean, build, and deploy
+ */
+gulp.task('clean-build-deploy', function (callback) {
+    runSequence('clean-build', 'serve-build', callback);
 });
 
 ////////////////
@@ -458,7 +479,7 @@ function startPlatoVisualizer() {
  */
 function startTests(singleRun, done) {
     var child;
-    var excludeFiles = ['./src/client/app/**/*spaghetti.js'];
+    var excludeFiles = [];
     var fork = require('child_process').fork;
 
     if (env.startServers) {
