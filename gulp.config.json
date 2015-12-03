@@ -35,12 +35,6 @@
   "nodejs": [
     "./src/server/**/*.js"
   ],
-  "fonts": [
-    "./bower_components/font-awesome/fonts/**/*.*"
-  ],
-  "images": [
-    "./src/client/content/images/**/*"
-  ],
   "report": "./report/",
   "build": "./build/"
 }

@@ -134,30 +134,40 @@ gulp.task('vendorcss', function () {
 });
 
 /**
- * Copy fonts
+ * Inject all the files into the new index.html. Does not create revisions.
  * @return {Stream}
  */
-gulp.task('fonts', function () {
-    var dest = paths.build + 'fonts';
-    log('Copying fonts');
-    return gulp
-        .src(paths.fonts)
-        .pipe(gulp.dest(dest));
-});
+gulp.task('inject', ['js', 'vendorjs', 'css', 'vendorcss'], function () {
+    log('Rev\'ing files and building index.html');
 
-/**
- * Compress images
- * @return {Stream}
- */
-gulp.task('images', function () {
-    var dest = paths.build + 'content/images';
-    log('Compressing, caching, and copying images');
+    var minified = paths.build + '**/*.min.*';
+    var index = paths.client + 'index.html';
+    var minFilter = plug.filter(['**/*.min.*', '!**/*.map']);
+    var indexFilter = plug.filter(['index.html']);
+
     return gulp
-        .src(paths.images)
-        .pipe(plug.cache(plug.imagemin({
-            optimizationLevel: 3
-        })))
-        .pipe(gulp.dest(dest));
+    // Write the revisioned files
+        .src([].concat(minified, index)) // add all built min files and index.html
+
+        // inject the files into index.html
+        .pipe(indexFilter) // filter to index.html
+        .pipe(inject('content/vendor.min.css', 'inject-vendor'))
+        .pipe(inject('content/all.min.css'))
+        .pipe(inject('vendor.min.js', 'inject-vendor'))
+        .pipe(inject('all.min.js'))
+        .pipe(gulp.dest(paths.build)); // write the rev files
+
+    function inject(path, name) {
+        var pathGlob = paths.build + path;
+        var options = {
+            ignorePath: paths.build.substring(1),
+            read: false
+        };
+        if (name) {
+            options.name = name;
+        }
+        return plug.inject(gulp.src(pathGlob), options);
+    }
 });
 
 /**
@@ -177,8 +187,10 @@ gulp.task('rev-and-inject', ['js', 'vendorjs', 'css', 'vendorcss'], function () 
     // Write the revisioned files
         .src([].concat(minified, index)) // add all built min files and index.html
         .pipe(minFilter) // filter the stream to minified css and js
+
         .pipe(plug.rev()) // create files with rev's
         .pipe(gulp.dest(paths.build)) // write the rev files
+
         .pipe(minFilter.restore()) // remove filter, back to original stream
 
         // inject the files into index.html
@@ -213,7 +225,7 @@ gulp.task('rev-and-inject', ['js', 'vendorjs', 'css', 'vendorcss'], function () 
  * Build the optimized app
  * @return {Stream}
  */
-gulp.task('build', ['rev-and-inject', 'images', 'fonts'], function () {
+gulp.task('build', ['inject'], function () {
     log('Building the optimized app');
     return gulp.src('').pipe(plug.notify({
         onLast: true,
@@ -248,7 +260,6 @@ gulp.task('watch', function () {
     log('Watching all files');
 
     var css = ['gulpfile.js'].concat(paths.css, paths.vendorcss);
-    var images = ['gulpfile.js'].concat(paths.images);
     var js = ['gulpfile.js'].concat(paths.js);
 
     gulp
@@ -259,9 +270,6 @@ gulp.task('watch', function () {
         .watch(css, ['css', 'vendorcss'])
         .on('change', logWatch);
 
-    gulp
-        .watch(images, ['images'])
-        .on('change', logWatch);
 
     function logWatch(event) {
         log('*** File ' + event.path + ' was ' + event.type + ', running tasks...');
