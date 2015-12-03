@@ -33,29 +33,23 @@ body > .container {
 }
 
 .poem {
-    padding-top: 60px;
+    margin: 60px 0 80px 0;
 }
 
 .poemnotes {
-    padding-top: 60px;
+    margin-top: 60px;
     color: slategrey;
 }
 
 .poemtext {
-    padding-top: 40px;
-    padding-right: 80px;
-    padding-left: 0;
+    margin: 40px 10px 0 0;
     color: darkslategray;
 }
 
-.poemscroll {
-    overflow-y: scroll;
-    height: 600px;
-}
-
-.notesscroll {
-    overflow-y: scroll;
-    height: 2700px;
+.poemnotes > section {
+    position: fixed;
+    margin-left: 10px;
+    margin-right: 120px;
 }
 
 .center {
@@ -99,4 +93,5 @@ body > .container {
 
 h1 {
     color: darkslategray;
+    margin-left: 40px;
 }

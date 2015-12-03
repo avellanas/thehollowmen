@@ -5,9 +5,9 @@ A long overdue update of the hypertext poem from my 2000 Oberlin College English
 The original, in all of its terrible c. 2000 html (frames!) is available at http://aduni.org/~heather/occs/honors/Poem.htm.
 
 ##TODOs
-Before going live:
+###Before going live:
 
-- [ ] Better solution to show selected note
+- [x] Better solution to show selected note
 - [ ] Clean up notes (make grammar, section heading consistent, etc)
 - [ ] Fix links
   - [ ] To Quotes.htm
@@ -15,6 +15,9 @@ Before going live:
   - [ ] To external sites (open in new tab/window)
   - [ ] to original project
 - [ ] Basic CD
+
+###Future Enhancements
+- [ ] Better mobile/responsive support
 
 ## Structure
 Modeled off of [AngularJS Modular Demo](https://github.com/johnpapa/ng-demos/tree/master/modular)
