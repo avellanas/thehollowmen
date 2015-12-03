@@ -13,7 +13,7 @@ The original, in all of its terrible c. 2000 html (frames!) is available at http
   - [ ] To Quotes.htm
   - [ ] To footnotes
   - [ ] To external sites (open in new tab/window)
-  - [ ] to original project
+  - [x] to original project
 - [ ] Basic CD
 
 ###Future Enhancements
@@ -89,10 +89,11 @@ Type `gulp test` to run the tests including both unit and midway tests (spins up
 Testing uses karma, mocha, chai, sinon, ngMidwayTester libraries.
 
 ### The Modules
-The app has 2 feature modules and depends on a series of external modules and custom but cross-app modules
+The app has 3 feature modules and depends on a series of external modules and custom but cross-app modules
 
 ```
 app --> [
+        app.poem
         app.layout,
         app.core --> [
 			ngAnimate,
