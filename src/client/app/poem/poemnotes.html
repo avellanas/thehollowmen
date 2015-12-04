@@ -1,53 +1,44 @@
 <section class="note" id="title" ng-show="vm.isVisible('title')">
     <h3>Title</h3>
 
-    <p>Eliot claimed to have made up the title, "The Hollow Men" from
+    <div>Eliot claimed to have made up the title, "The Hollow Men" from
         combining "The Hollow Land", the title of a romance by William Morris with
         Kipling's title, "The Broken Men". Many scholars believe this to
         be one of Ol' Possum's many false trails, instead believing it comes from
-        a mention of '<a href="Quotes.htm#JCIVii">hollow
-            men</a>' in <i>Julius Caesar </i>or any of several references to Joseph
-        Conrad's Kurtz as hollow in some way (a 'hollow sham', 'hollow at the core').
-        The title immediately presents us with the first of many allusions, directly
-        referencing two of the four main sources for this poem, Shakespeare's <i><a
-                ng-click="vm.showNote('juliuscaesar')">Julius
-            Caesar</a>,</i> and Conrad's <i><a ng-click="vm.showNote('heartofdarkness')">Heart of Darkness</a></i>
-        (which I will often abbreviate <i>HoD</i>). The other sources are
-        the <a ng-click="vm.showNote('gunpowderplot')">Gunpowder Plot</a> and <i><a
-                ng-click="vm.showNote('divinecomedy')">The
-            Divine Comedy</a></i>, both of which also deal with men or shadows of men
-        who may be described as hollow at the core.
-    </p>
-</section>
+        a mention of '<a ng-click="showQuoteJC = !showQuoteJC">hollow
+            men' in <i>Julius Caesar</i></a>
 
-<section class="note" id="gunpowderplot" ng-show="vm.isVisible('gunpowderplot')">
-    <h3>Gunpowder Plot</h3>
-
-    <p><a href="http://www.gunpowder-plot.org">This
-        conspiracy</a> arose from the English Catholics' resentment of King James I
-        and his reign's treatment of their religion. A group of extremists
-        led by Rober Catesby planed to seize power by killing King James I and
-        his ministers at the State Opening of Parliament (November 5, 1605), leaving
-        England without a government. Francis Tresham, one of the conspirators,
-        gave the plan away when he wrote to his brother-in-law, Lord Monteagle,
-        telling him to stay away from the Houses of Parliament during the Opening.
-        Monteagle informed the Lord Chancellor of the warning, who in turn told
-        the king. On November 4, 1605, Guy Fawkes was arrested in the cellars
-        of the House of Lords, standing guard over two tons of gunpowder.
-        He was tortured until he revealed the names of his co-conspirators, who,
-        if they hadn't yet fled the country, were soon executed. Now the British
-        celebrate November 5 with bonfires, fireworks, and by burning effigies
-        of Guy. Theoretically, they are celebrating the execution of a traitor,
-        though some have been been known to see it as a celebration of the near
-        death of the monarchy.
-    </p>
+        <div class="inline-quote" ng-show="showQuoteJC">
+    <p>Brutus (regarding Cassius):</p>
+    <blockquote>But hollow men, like horses hot at hand,
+        <br>Make gallant show and promise of their mettle;
+        <br>But when they should endure the bloody spur,
+        <br>They fall their crests, and, like deceitful jades,
+        <br>Sink in trial.
+    </blockquote>
+    <p class="right"><a
+            href="http://shakespeare.mit.edu/julius_caesar/julius_caesar.4.2.html" target="_blank"><i>Julius
+        Caesar </i>Act 4 Scene 2</a></p>
+    </div>
+    or any of several references to Joseph
+    Conrad's Kurtz as hollow in some way (a 'hollow sham', 'hollow at the core').
+    The title immediately presents us with the first of many allusions, directly
+    referencing two of the four main sources for this poem, Shakespeare's <i><a
+        ng-click="vm.showNote('juliuscaesar')">Julius
+    Caesar</a>,</i> and Conrad's <i><a ng-click="vm.showNote('heartofdarkness')">Heart of Darkness</a></i>. The other
+    sources are
+    the <a ng-click="vm.showNote('gunpowderplot')">Gunpowder Plot</a> and <i><a
+        ng-click="vm.showNote('divinecomedy')">The
+    Divine Comedy</a></i>, both of which also deal with men or shadows of men
+    who may be described as hollow at the core.
+    </div>
 </section>
 
 <section class="note" id="juliuscaesar" ng-show="vm.isVisible('juliuscaesar')">
     <h3><i>Julius Caesar</i></h3>
 
-    <p><a href="http://tech-two.mit.edu/Shakespeare/julius_caesar/index.html">Shakespeare's version</a> of the
-        <a href="http://classics.mit.edu/Plutarch/caesar.html">story
+    <p><a href="http://shakespeare.mit.edu/julius_caesar/index.html" target="_blank">Shakespeare's version</a> of the
+        <a href="http://classics.mit.edu/Plutarch/caesar.html" target="_blank">story
             of Julius Caesar</a> also centers around a violent conspiracy of men who
         are blinded by their cause. In it, Brutus, a leading Roman citizen, is
         approached by Cassius, who is recruiting people to conspire to assassinate
@@ -58,10 +49,56 @@
     </p>
 </section>
 
+<section class="note" id="heartofdarkness" ng-show="vm.isVisible('heartofdarkness')">
+    <h3><i>Heart of Darkness</i></h3>
+
+    <p>Next to Dante's writing, <i><a
+            href="http://www.gutenberg.org/ebooks/526" target="_blank">Heart
+        of Darkness</a></i> by Joseph Conrad
+        is commonly held to be most important and influential literary experience
+        in Eliot's poetry. It is a story full of hollow men&mdash;men empty of
+        faith, personality, moral strength, and even humanity. In it the
+        character Marlow tells of his own journey into the heart of Africa, a dark
+        world populated by morally empty men living only for ivory and the money
+        and power that it brings. Deep in the interior, he meets Kurtz, the
+        most depraved man of them all, yet one who, on his deathbed, seems to realize
+        the true horror of what he and humanity as he knows it is and does.
+    </p>
+</section>
+
+<section class="note" id="gunpowderplot" ng-show="vm.isVisible('gunpowderplot')">
+    <h3>Gunpowder Plot</h3>
+
+    <p><a href="http://www.gunpowder-plot.org" target="_blank">This
+        conspiracy</a> arose from the English Catholics' resentment of King James I
+        and his reign's treatment of their religion. A group of extremists
+        led by Rober Catesby planed to seize power by killing King James I and
+        his ministers at the State Opening of Parliament (November 5, 1605), leaving
+        England without a government. </p>
+
+    <p>Francis Tresham, one of the conspirators,
+        gave the plan away when he wrote to his brother-in-law, Lord Monteagle,
+        telling him to stay away from the Houses of Parliament during the Opening.
+        Monteagle informed the Lord Chancellor of the warning, who in turn told
+        the king. </p>
+
+    <p>On November 4, 1605, Guy Fawkes was arrested in the cellars
+        of the House of Lords, standing guard over two tons of gunpowder.
+        He was tortured until he revealed the names of his co-conspirators, who,
+        if they hadn't yet fled the country, were soon executed. </p>
+
+    <p>Now the British
+        celebrate November 5 with bonfires, fireworks, and by burning effigies
+        of Guy. Theoretically, they are celebrating the execution of a traitor,
+        though some have been been known to see it as a celebration of the near
+        death of the monarchy.
+    </p>
+</section>
+
 <section class="note" id="divinecomedy" ng-show="vm.isVisible('divinecomedy')">
     <h3><i>The Divine Comedy</i></h3>
 
-    <p><i><a href="http://www.divinecomedy.org/divine_comedy.html">The Divine
+    <p><i><a href="http://www.divinecomedy.org/divine_comedy.html" target="_blank">The Divine
         Comedy</a></i>, Dante Alighieri's classic allegorical story, in which Dante
         himself becomes a pilgrim traveling through the three kingdoms of the afterlife:
         hell (<i>The Inferno)</i>, purgatory (<i>Purgatorio</i>), and heaven (<i>Paradiso</i>).
@@ -71,32 +108,26 @@
         desire to join her there again after his own death.
     </p>
 </section>
-<section class="note" id="heartofdarkness" ng-show="vm.isVisible('heartofdarkness')">
-    <h3><i>Heart of Darkness</i></h3>
 
-    <p>Next to Dante's writing, <i><a
-            href="http://www.georgetown.edu/irvinemj/english016/conrad/heart.of.darkness.txt">Heart
-        of Darkness</a></i> by Joseph Conrad
-        is commonly held to be most important and influential literary experience
-        in Eliot's poetry. It is a story full of hollow men- men empty of
-        faith, personality, moral strength, and even humanity. In it the
-        character Marlow tells of his own journey into the heart of Africa, a dark
-        world populated by morally empty men living only for ivory and the money
-        and power that it brings. Deep in the interior, he meets Kurtz, the
-        most depraved man of them all, yet one who, on his deathbed, seems to realize
-        the true horror of what he and humanity as he knows it is and does.
-    </p>
-</section>
 <section class="note" id="1925" ng-show="vm.isVisible('1925')">
     <h3>1925</h3>
 
     <p>Eliot wrote this poem during a period of absence from the bank,
         having just suffered a nervous breakdown. The theme of 'hollowness'
         presented in the poem directly relates to his own psychological condition
-        at the time, a condition known at the time as 'aboulie'.<sup><font size=-2><a
-                href="Footnotes.htm#Notesone">1</a></font></sup>
+        at the time, a condition known at the time as 'aboulie'.<sup><a
+                ng-click="footnoteOne = !footnoteOne">1</a></sup>
     </p>
+
+    <div class="footnote" ng-show="footnoteOne">
+        <p>Southam, B.C. <i>A Guide to the
+            Selected Poems of T.S. Eliot</i>. San Diego: Harcourt Brace &amp;
+            Company, 1994. p. 208.
+
+        <p>
+    </div>
 </section>
+
 <section class="note" id="epigraph1" ng-show="vm.isVisible('epigraph1')">
     <h3>Epigraph 1</h3>
 
@@ -121,7 +152,7 @@
 </section>
 
 <section class="note" id="onefour" ng-show="vm.isVisible('onefour')">
-    <h3>ll.1-4</h3>
+    <h3>ll. 1-4</h3>
 
     <div class="quote">
         We are the hollow men<br/>
@@ -136,65 +167,140 @@
         modern man, an empty, corrupt breed.
     </p>
 </section>
+
 <section class="note" id="two" ng-show="vm.isVisible('two')">
     <h3>l. 2</h3>
 
     <div class="quote">We are the stuffed men</div>
 
     <p> According to Valerie Eliot, the marionette in Stravinsky's <a
-            href="http://balletdance.about.com/arts/balletdance/library/weekly/aa112398.htm"><i>Petrouchka</i>.</a><sup><font
-            size=-2><a href="Footnotes.htm#notestwo">2</a></font></sup>
+            href="https://en.wikipedia.org/wiki/Petrushka_(ballet)" target="_blank"><i>Petrouchka</i>.</a><sup><a
+            ng-click="footnoteTwo = !footnoteTwo">2</a></sup>
     </p>
+
+    <div class="footnote" ng-show="footnoteTwo">
+        <p>Southam, B.C. <i>A Guide to the
+            Selected Poems of T.S. Eliot</i>. San Diego: Harcourt Brace &amp;
+            Company, 1994. p. 210.
+
+        <p>
+    </div>
 </section>
+
 <section class="note" id="four" ng-show="vm.isVisible('four')">
     <h3>l. 4</h3>
 
     <div class="quote">Headpiece filled with straw</div>
 
-    <p>Straw is the usual filling for the effigies burned on <a
-            href="http://web.idirect.com/~redsonja/guy/">Guy
+    <div>Straw is the usual filling for the effigies burned on <a
+            href="https://en.wikipedia.org/wiki/Guy_Fawkes_Night" target="_blank">Guy
         Fawkes Day</a>. It is also a common building material for effigies
         used in harvest or fertility rituals celebrating the symbolic death of
         a vegetation god as necessary for the rebirth and growth of the land.
-        One of these, observed by both <a href="Quotes.htm#FrazerArgei">Sir
-            James Frazer</a> and <a href="Quotes.htm#FowlerArgei">W.
-            Warde Fowler</a> is the Roman ritual of the Argei. This imagery suggests
+        One of these, observed by both <a ng-click="quoteFrazerArgei = !quoteFrazerArgei">Sir
+            James Frazer</a>
+
+        <div class="inline-quote" ng-show="quoteFrazerArgei">
+            <blockquote>&hellip;it is possible that the puppets made of rushes, which in
+                the month of May the pontiffs and Vestal Virgins annually threw into the
+                Tiber from the old Sublician bridge at Rome had originally the same significance
+                [as the Roman festival Compitalia]; that is, they may have been designed
+                to purge the city from demoniac influence by diverting the attention of
+                the demons from human beings to the puppets and then toppling the whole
+                uncanny crew, neck and crop, into the river, which would soon sweep them
+                far out to sea&hellip; This interpretation of Roman custom is supported to some
+                extent by the evidence of Plutarch, who speaks of the ceremony as "the
+                greatest of purifications".
+            </blockquote>
+            <p class="right">Frazer, <i><a href="http://www.bartleby.com/196/" target="_blank">The Golden Bough</a></i>
+            </p>
+        </div>
+        and <a ng-click="quoteFowlerArgei = !quoteFowlerArgei">W.
+            Warde Fowler</a>
+
+        <div class="inline-quote" ng-show="quoteFowlerArgei">
+            <blockquote>&hellip;each year on the ides of March, which is in my view rather
+                magical than religious, though the ancients themselves looked upon it as
+                a kind of purification, [namely] the casting into the Tiber from the Pons
+                Sublicius of twenty-four or twenty-seven straw puppets by the Vestal Virgins
+                in the presence of the magistrates and pontifices. Recently an attempt
+                has been made by Wissowa to prove that this strange ceremony was not primitive,
+                but simply a case of substitution of puppets for real human victims as
+                late as the age of the Punic wars. These puppets were called Argei, which
+                naturally suggests Greeks; and Wissowa has contrived to persuade himself
+                not only that a number of Greeks were actually put to death by drowning
+                in an age when everything Greek was beginning to be reverenced at Rome,
+                but (still more extraordinary to an anthropologist) that primitive device
+                of substitution was had in requisition at that late date in order to carry
+                on the memory of that ghastly deed. And the world of German learning has
+                silently followed their leader, without taking the trouble to test his
+                conclusions&hellip; whatever be the history of the accessories of the rite&mdash;
+                and they are various and puzzling,&mdash;that the actual immersion of the
+                puppets is the survival of a primitive piece of sympathetic magic, the
+                object being possibly to procure rain.
+            </blockquote>
+
+            <p class="right">Fowler, <i>Roman Religious Experience</i><sup><a
+                    ng-click="footnoteThree = !footnoteThree">3</a></sup></p>
+
+            <div class="footnote" ng-show="footnoteThree">
+                <p>Ronnick, Michele Valerie. <i>Explicator</i>,
+                    "Eliot's 'The Hollow Men'". Winter 1998. pp. 91-93.
+
+                <p>
+            </div>
+        </div>
+        is the Roman ritual of the Argei. This imagery suggests
         that a sacrifice of the 'hollow men' can redeem mankind and that after
         their destruction we can again flourish.
+    </div>
+    <br/>
 
     <p>Eliot examined a similar myth, that of the Fisher King, extensively
-        in <i><a href="http://www.bartleby.com/201/1.html">The Waste Land</a></i>.
+        in <i><a href="http://www.bartleby.com/201/1.html" target="_blank">The Waste Land</a></i>.
         The Fisher King myth has many variations, but generally includes an ailing
-        king whose kingdom is sterile- nothing will grow, and the people suffer.
+        king whose kingdom is sterile&mdashnothing will grow, and the people suffer.
         The king and the land can only be cured by a pure quest for some sort of
         knowledge (sometimes in the form of an object, sometimes in a question
         that must be asked). It is also frequently associated with the Arthurian
-        quest for the Holy Grail and the knight Perceval. Ususally, with
+        quest for the Holy Grail and the knight Perceval. Usually, with
         the success of the quest, the king and the land are healed. Sometimes
-        the king must die and be succeeded before the land can again bloom.
+        the king must die and be succeeded before the land can again bloom.</p>
+
+    <p>
         The theme of a king or god needing to die, at least symbolically, for the
         land to become fertile (for spring to come) also occurs in the Summerian
         myth of Inanna and Demuzi, the rituals surrounding the Egyptian god Osris,
         and the Greek myth of Persephone and Demeter.
     </p>
+
 </section>
+
 <section class="note" id="six" ng-show="vm.isVisible('six')">
     <h3>l. 6</h3>
 
     <div class="quote">We whisper together</div>
 
     <p>Whispers act as an instrument of fate throughout
-        <i><a ng-click="vm.showNote('heartofdarkness')">HoD</a></i>.
+        <i><a ng-click="vm.showNote('heartofdarkness')">Heart of Darkness</a></i>.
         Marlow recounts how the wilderness "had whispered to [Kurtz] things about
-        himself which he did not know ... and the whisper proved irresistibly fascinating.
-        It echoed loudly within him because he was hollow at the core".<sup><font size=-2><a
-                href="Footnotes.htm#notesfour">4</a></font></sup>
+        himself which he did not know &hellip; and the whisper proved irresistibly fascinating.
+        It echoed loudly within him because he was hollow at the core".<sup><a
+                ng-click="footnoteFour = !footnoteFour">4</a></sup>
         And while Marlow attempts and fails to summon up the courage to tell Kurtz's
         Intended the truth about Kurtz's last words, those words are whispered
         in his mind, signifying his own hollowness and cowardice. Besides
         symbolizing fate, whispers can also signify conspiracy, a theme present
         throughout this poem and seemingly inherent in the hollow men.
     </p>
+
+    <div class="footnote" ng-show="footnoteFour">
+        <p>Kimbrough, Robert, ed. <i>Joseph Conrad,
+            Heart of Darkness</i>. New York: W. W. Norton &amp; Company, 1988.
+            pp. 57-58.
+
+        <p>
+    </div>
 </section>
 <section class="note" id="eleventwelve" ng-show="vm.isVisible('eleventwelve')">
     <h3>ll. 11-12</h3>
@@ -209,7 +315,7 @@
         These shades never made a choice regarding their spiritual state during
         life (neither following nor rebelling against God) instead living solely
         for themselves. Neither heaven nor hell will let them past its gates.
-        A similar condition exists, in <i>HoD</i>, among the men of the Eldorado
+        A similar condition exists, in <i>Heart of Darkness</i>, among the men of the Eldorado
         Exploring Expedition: they lacked the moral strength and courage to back
         up their greed. A third explanation of the lines is Marlow's own
         experience with and resistance of death. Here we see that the same
@@ -249,7 +355,8 @@
 
     <div class="quote">Remember us&mdash;if at all&mdash;not as lost</div>
 
-    <p>The song sung by children begging for pennies on <a href="http://web.idirect.com/~redsonja/guy/">Guy
+    <p>The song sung by children begging for pennies on <a href="https://en.wikipedia.org/wiki/Guy_Fawkes_Night"
+                                                           target="_blank">Guy
         Fawkes Day</a> begins "Please to remember / The fifth of November / Gunpowder,
         treason, and plot."
     </p>
@@ -281,12 +388,19 @@
         by the waters of the River Lethe. Marlow encounters the force of
         eyes and glances throughout his adventures, ranging from the invisible
         eyes of the forest, to Kurtz's dying gaze, to the "guileless, profound,
-        confident, and trustful" gaze of Kurtz's intended.<sup><font size=-2><a
-                href="Footnotes.htm#notesfive">5</a></font></sup>
+        confident, and trustful" gaze of Kurtz's intended.<sup><a ng-click="footnoteFive = !footnoteFive">5</a></sup>
         The hollow men should be shamed by the eyes of the virtuous, but at the
         same time those eyes contain within them a chance for redemption.
         This is an opportunity Dante the pilgrim accepted and Marlow refused.
     </p>
+
+    <div class="footnote" ng-show="footnoteFive">
+        <p>Kimbrough, Robert, ed. <i>Joseph Conrad,
+            Heart of Darkness</i>. New York: W. W. Norton &amp; Company, 1988.
+            p. 73.
+
+        <p>
+    </div>
 </section>
 <section class="note" id="twentytwentytwo" ng-show="vm.isVisible('twentytwentytwo')">
     <h3>ll. 20-22</h3>
@@ -321,7 +435,7 @@
     </div>
 
     <p>These lines resemble the Dante's description of the Earthly
-        Paradise, when still seen from afar in Cantos <i>xxvii-xxix</i>.
+        Paradise, when still seen from afar in Cantos XXVII-XXIX.
         Dante used the star as a symbol representing God or Mary.
     </p>
 </section>
@@ -341,8 +455,16 @@
 
     <p>A book Eliot reviewed in 1923, <i>The Sacred Dance</i> by W.O.E.
         Oesterley contains the image of a 'savage' who is awestruck by 'a tree,
-        swayed by wind, moved'.<sup><font size=-2><a href="Footnotes.htm#notessix">6</a></font></sup>
+        swayed by wind, moved'.<sup><a ng-click="footnoteSix = !footnoteSix">6</a></sup>
     </p>
+
+    <div class="footnote" ng-show="footnoteSix">
+        <p>Southam, B.C. <i>A Guide to the
+            Selected Poems of T.S. Eliot</i>. San Diego: Harcourt Brace &amp;
+            Company, 1994. p. 212.
+
+        <p>
+    </div>
 </section>
 <section class="note" id="thirtytwo" ng-show="vm.isVisible('thirtytwo')">
     <h3>l. 32</h3>
@@ -350,7 +472,7 @@
     <div class="quote">Such deliberate disguises</div>
 
     <p>In the section "The Propitiation of Vermin by Farmers" in <i><a
-            href="http://www.bartleby.com/196/">The
+            href="http://www.bartleby.com/196/" target="_blank">The
         Golden Bough</a></i> Frazer discusses both the dressing in animal skins
         for ritualistic purposes, as well as the custom of hanging up the corpse
         of a member of a crop damaging species as a possible origin of the scarecrow.
@@ -368,9 +490,9 @@
 
     <div class="quote">Rat's coat, crowskin, crossed staves</div>
 
-    <p>In <i><a href="http://www.bartleby.com/201/1.html">The Waste Land</a></i>
-    Eliot associates the "man with three staves" a card in the Tarot with the
-    Fisher King
+    <p>In <i><a href="http://www.bartleby.com/201/1.html" target="_blank">The Waste Land</a></i>
+        Eliot associates the "man with three staves" a card in the Tarot with the
+        Fisher King
     </p>
 </section>
 <section class="note" id="thirtyfive" ng-show="vm.isVisible('thirtyfive')">
@@ -379,11 +501,18 @@
     <div class="quote">Behaving as the wind behaves</div>
 
     <p>In the <i><a ng-click="vm.showNote('divinecomedy')">Inferno</a></i> spirits are
-        blown about by the wind and in <i><a ng-click="vm.showNote('heartofdarkness')">HoD</a></i>
-        the native dies just because he left the shutter open, "He had no restraint-
-        just like Kurtz- a tree swayed in the wind."<sup><font size=-2><a
-                href="Footnotes.htm#notesseven">7</a></font></sup>
+        blown about by the wind and in <i><a ng-click="vm.showNote('heartofdarkness')">Heart of Darkness</a></i>
+        the native dies just because he left the shutter open, "He had no restraint&mdash;
+        just like Kurtz&mdash;a tree swayed in the wind."<sup><a ng-click="footnoteSeven = !footnoteSeven">7</a></sup>
     </p>
+
+    <div class="footnote" ng-show="footnoteSeven">
+        <p>Kimbrough, Robert, ed. <i>Joseph Conrad,
+            Heart of Darkness</i>. New York: W. W. Norton &amp; Company, 1988.
+            p. 51.
+
+        <p>
+    </div>
 </section>
 <section class="note" id="thirtyseventhirtyeight" ng-show="vm.isVisible('thirtyseventhirtyeight')">
     <h3>ll. 37-38</h3>
@@ -422,25 +551,42 @@
     </div>
 
     <p>These lines are thought to be material originally discarded
-        from <i><a href="http://www.bartleby.com/201/1.html">The Waste Land</a></i>
+        from <i><a href="http://www.bartleby.com/201/1.html" target="_blank">The Waste Land</a></i>
         as they closely resemble lines from sections I and V both in language and
         imagery. The stone images (and 'broken stone' in l. 51) suggests
         idolatrous worship. "The worship of stones is a degradation of a
         higher form of worship," F.B. Jevens's <i>An Introduction to the History
-            of Religions</i>, a 1896 text Eliot is known to have studied at Harvard.<sup><font size=-2><a
-                href="Footnotes.htm#noteseight">8</a></font></sup>
+            of Religions</i>, a 1896 text Eliot is known to have studied at Harvard.<sup><a
+                ng-click="footnoteEight = !footnoteEight">8</a></sup>
         The desert imagery suggests sterility, probably the sterility of the modern
         world.
     </p>
+
+    <div class="footnote" ng-show="footnoteEight">
+        <p>Southam, B.C. <i>A Guide to the
+            Selected Poems of T.S. Eliot</i>. San Diego: Harcourt Brace &amp;
+            Company, 1994. p. 213.
+
+        <p>
+    </div>
 </section>
 <section class="note" id="fortyseven" ng-show="vm.isVisible('fortyseven')">
     <h3>l. 47</h3>
 
     <div class="quote">Waking alone</div>
 
-    <p><i><a ng-click="vm.showNote('heartofdarkness')">HoD</a></i>: "We live, as we dream
-        - alone."<sup><font size=-2><a href="Footnotes.htm#notesnine">9</a></font></sup>
+    <p><i><a ng-click="vm.showNote('heartofdarkness')">Heart of Darkness</a></i>: "We live, as we
+        dream&mdash;alone."<sup><a
+                ng-click="footnoteNine = !footnoteNine">9</a></sup>
     </p>
+
+    <div class="footnote" ng-show="footnoteNine">
+        <p>Kimbrough, Robert, ed. <i>Joseph Conrad,
+            Heart of Darkness</i>. New York: W. W. Norton &amp; Company, 1988.
+            p. 30.
+
+        <p>
+    </div>
 </section>
 <section class="note" id="fortyninefiftyone" ng-show="vm.isVisible('fortyninefiftyone')">
     <h3>ll. 49-51</h3>
@@ -468,7 +614,7 @@
     <p>A perversion of Juliet's line about "lips that they must
         use in prayer" instead of for kissing. Kurtz's lips are being used
         in pagan worship instead of to express love for his Intended. Also,
-        from Psalm 57, as used in <i><a ng-click="vm.showNote('divinecomedy')">Purgatorio xxii, xxxiii</a>,</i>
+        from Psalm 57, as used in <i><a ng-click="vm.showNote('divinecomedy')">Purgatorio XXII, XXXIII</a>,</i>
         "Lord, open thou my lips; and my mouth shall show forth thy praise!"
     </p>
 </section>
@@ -484,15 +630,23 @@
 
     <p>The valley Marlow walks through upon his arrival to the Congo,
         half excavated, littered with abandoned objects, and hopeless native laborers,
-        "it seemed to me I had stepped into the gloomy circle of some Inferno ...
+        "it seemed to me I had stepped into the gloomy circle of some Inferno &hellip;
         Black shapes crouched, lay sat between the trees, leaning against the trunks,
         clinging to the earth, half coming out, half effaced with in the dim light,
-        in all the attitudes of pain, abandonment, and despair."<sup><font size=-2><a
-                href="Footnotes.htm#notesten">10</a></font></sup>
+        in all the attitudes of pain, abandonment, and despair."<sup><a
+                ng-click="footnoteTen = !footnoteTen">10</a></sup>
         Like <a ng-click="vm.showNote('thirtyninefortyfour')">ll. 39-44</a>, a representation of
         the sterile, modern world, a place where the eyes that offer hope and shame
         don't exist.
     </p>
+
+    <div class="footnote" ng-show="footnoteTen">
+        <p>Kimbrough, Robert, ed. <i>Joseph Conrad,
+            Heart of Darkness</i>. New York: W. W. Norton &amp; Company, 1988.
+            p. 20.
+
+        <p>
+    </div>
 </section>
 <section class="note" id="fiftysix" ng-show="vm.isVisible('fiftysix')">
     <h3>l. 56</h3>
@@ -502,7 +656,7 @@
     <p>Possibly the "new jaw bone of an ass" (Judges xv, 15-19) with
         which Samson slew a thousand Philistines. This would seem to signify
         that the civilizing factor has broken, contributing to, or allowing, modern
-        man's decline. <i><a href="http://www.bartleby.com/196/">The Golden
+        man's decline. <i><a href="http://www.bartleby.com/196/" target="_blank">The Golden
             Bough</a></i> offers an anthropological explanation; the Baganda (and African
         tribe) believe that the spirit of the dead clings to the jawbone.
         The jaw bone of their deceased king is made into an effigy and put in a
@@ -526,16 +680,30 @@
                 ng-click="vm.showNote('juliuscaesar')">Julius
             Caesar</a></i> and of the <a ng-click="vm.showNote('gunpowderplot')">Gunpowder Plot</a>,
         and Marlow's experiences with the secretive trading company, "It was just
-        as though I had been let into some conspiracy."<sup><font size=-2><a
-                href="Footnotes.htm#noteseleven">11</a></font></sup>
+        as though I had been let into some conspiracy."<sup><a ng-click="footnoteEleven = !footnoteEleven">11</a></sup>
         At the trading station he finds that most of the white employees occupy
         themselves "by backbiting and intriguing against each other in a foolish
         kind of way. There was an air of plotting about the station, but
-        nothing came of it, of course it was as unreal as everything else."<sup><font size=-2><a
-                href="Footnotes.htm#notestwelve">12</a></font></sup>
+        nothing came of it, of course it was as unreal as everything else."<sup><a
+                ng-click="footnoteTwelve = !footnoteTwelve">12</a></sup>
         This is the final meeting of a doomed conspiracy, the meeting of the lost,
         hollow souls before they sentenced to the inferno.
     </p>
+
+    <div class="footnote" ng-show="footnoteEleven">
+        <p>Kimbrough, Robert, ed. <i>Joseph Conrad,
+            Heart of Darkness</i>. New York: W. W. Norton &amp; Company, 1988.
+            p. 14.
+
+        <p>
+    </div>
+    <div class="footnote" ng-show="footnoteTwelve">
+        <p>Kimbrough, Robert, ed. <i>Joseph Conrad,
+            Heart of Darkness</i>. New York: W. W. Norton &amp; Company, 1988.
+            p. 27.
+
+        <p>
+    </div>
 </section>
 <section class="note" id="sixty" ng-show="vm.isVisible('sixty')">
     <h3>l. 60</h3>
@@ -564,10 +732,18 @@
         of the cloudy evening had taken refuge on her forehead. This fair hair,
         this pale visage, this pure brow, seemed surrounded by an ashy halo from
         which dark eyes looked out at me. Their glance was guileless, profound,
-        and trustful."<sup><font size=-2><a href="Footnotes.htm#notesthirteen">13</a></font></sup>
+        and trustful."<sup><a ng-click="footnoteThirteen = !footnoteThirteen">13</a></sup>
         That moment Marlow's chance to resist the darkness which has penetrated
         modern life.
     </p>
+
+    <div class="footnote" ng-show="footnoteThirteen">
+        <p>Kimbrough, Robert, ed. <i>Joseph Conrad,
+            Heart of Darkness</i>. New York: W. W. Norton &amp; Company, 1988.
+            p. 73.
+
+        <p>
+    </div>
 </section>
 <section class="note" id="sixtythreesixtyfour" ng-show="vm.isVisible('sixtythreesixtyfour')">
     <h3>ll. 63-64</h3>
@@ -577,11 +753,11 @@
         Multifoliate rose
     </div>
 
-    <p>In <i><a ng-click="vm.showNote('divinecomedy')">Paradiso xxx</a></i> the Pilgrim's
+    <p>In <i><a ng-click="vm.showNote('divinecomedy')">Paradiso XXX</a></i> the Pilgrim's
         vision of the highest level of heaven is of a rose whose petals are formed
-        by Mary and the saints. In <i><a ng-click="vm.showNote('divinecomedy')">Paradiso xxxi</a></i>
+        by Mary and the saints. In <i><a ng-click="vm.showNote('divinecomedy')">Paradiso XXXI</a></i>
         he refers to God as the 'single star', and in <i><a ng-click="vm.showNote('divinecomedy')">Paradiso
-            xxxii</a></i> and elsewhere he refers to Mary as a rose.
+            XXXII</a></i> and elsewhere he refers to Mary as a rose.
     </p>
 </section>
 <section class="note" id="sixtyfive" ng-show="vm.isVisible('sixtyfive')">
@@ -612,13 +788,21 @@
         the poem. 5:00am is the traditional time of Christ's resurrection.
         In a 1923 review Eliot quoted Frazer on "how often with the decay of old
         faiths the serious rites and pageants .. [primitive, religious dances]
-        have degenerated into the sports of children."<sup><font size=-2><a
-                href="Footnotes.htm#notesfourteen">14</a></font></sup>
+        have degenerated into the sports of children."<sup><a
+                ng-click="footnoteFourteen = !footnoteFourteen">14</a></sup>
         Here he has further perverted the children's song by turning it into a
         modern infertility dance. By performing an infertility dance at the
         moment of resurrection, we are in effect blocking and rejecting the salvation
         it can bring.
     </p>
+
+    <div class="footnote" ng-show="footnoteFourteen">
+        <p>Southam, B.C. <i>A Guide to the
+            Selected Poems of T.S. Eliot</i>. San Diego: Harcourt Brace &amp;
+            Company, 1994. p. 215.
+
+        <p>
+    </div>
 </section>
 <section class="note" id="seventytwoninety" ng-show="vm.isVisible('seventytwoninety')">
     <h3>ll. 72-90</h3>
@@ -630,14 +814,17 @@
         And the act<br/>
         Falls the Shadow<br/>
         <br/>
+
         <p class="indent">For Thine is the Kingdom</p>
         Between the conception<br/>
         And the creation<br/>
         Between the emotion<br/>
         And the response<br/>
         Falls the Shadow<br/>
+
         <p class="right">Life is very long</p>
         <br/>
+
         <p class="indent">Between the desire</p>
         And the spasm<br/>
         Between the potency<br/>
@@ -648,8 +835,8 @@
     </div>
 
     <p>Taken almost directly from <a
-            href="http://tech-two.mit.edu/Shakespeare/julius_caesar/julius_caesar.2.1.html"><i>Julius
-        Caesar</i> II.i</a>:
+            href="http://shakespeare.mit.edu/julius_caesar/julius_caesar.2.1.html" target="_blank"><i>Julius
+        Caesar</i> Act 2 Scene 1</a>:
 
     <p>BRUTUS
     <blockquote>Between the acting of a dreadful thing
@@ -661,15 +848,15 @@
         <br>The nature of an insurrection.
     </blockquote>
     <p>Another possible source is the line "Between the void and its pure issue"
-    from Val&eacute;ry's <i>The Cemetery by the Sea</i>. In 1924, Eliot
-    wrote an introduction to Val&eacute;ry's<i> Le Serpent</i> in which he
-    compared that line to Brutus's lines. He viewed <i>The Cemetery by
-    the Sea</i> as an expression of Valery's melancholy skepticism attributed
-    to "the agony of creation ... the mind constantly mocks and dissuades,
-    and urges the creative activity in vain." The three central stanzas of
-    this section closely resemble Valery's in their phrasal structure and emphatic
-    rhythm and also in their thematic contrast between 'idea' and 'reality'.<sup><font size=-2><a
-        href="Footnotes.htm#notesfifteen">15</a></font></sup></p>
+        from Val&eacute;ry's <i>The Cemetery by the Sea</i>. In 1924, Eliot
+        wrote an introduction to Val&eacute;ry's<i> Le Serpent</i> in which he
+        compared that line to Brutus's lines. He viewed <i>The Cemetery by
+            the Sea</i> as an expression of Valery's melancholy skepticism attributed
+        to "the agony of creation &hellip; the mind constantly mocks and dissuades,
+        and urges the creative activity in vain." The three central stanzas of
+        this section closely resemble Valery's in their phrasal structure and emphatic
+        rhythm and also in their thematic contrast between 'idea' and 'reality'.<sup><a
+                ng-click="footnoteFifteen = !footnoteFifteen">15</a></sup></p>
 
     <p>This section of the poem deals with the true cause of hollowness- failing
         to make that choice that was once offered, failing to take action, giving
@@ -677,6 +864,14 @@
         the difference between salvation and damnation and has either rejected
         that chance or failed to choose between the two.
     </p>
+
+    <div class="footnote" ng-show="footnoteFifteen">
+        <p>Southam, B.C. <i>A Guide to the
+            Selected Poems of T.S. Eliot</i>. San Diego: Harcourt Brace &amp;
+            Company, 1994. p. 215-216.
+
+        <p>
+    </div>
 </section>
 <section class="note" id="seventysix" ng-show="vm.isVisible('seventysix')">
     <h3>l. 76</h3>
@@ -688,25 +883,39 @@
         most famous poem. It contains the phrases "Then fell thy shadow"
         and "Then falls the shadow." He is quoted as responding, "This derivation
         had not occurred in my mind, but I believe it to be correct, because the
-        lines&hellip; have always run in my head."<sup><font size=-2><a
-                href="Footnotes.htm#notessixteen">16</a></font></sup></p>
+        lines&hellip; have always run in my head."<sup><a ng-click="footnoteSixteen = !footnoteSixteen">16</a></sup></p>
 
-        <p><i><a ng-click="vm.showNote('heartofdarkness')">HoD</a></i> also features shadows throughout:
+    <p><i><a ng-click="vm.showNote('heartofdarkness')">Heart of Darkness</a></i> also features shadows throughout:
         the boat moves in shadow, men die with shadows across their faces, pain
         is experienced in shadow, Kurtz's secrets are metaphorical shadows, Kurtz
-        himself is a "Shadow&mdash;that wandering and tormented thing,"<sup><font size=-2><a
-                href="Footnotes.htm#notesseventeen">17</a></font></sup>
+        himself is a "Shadow&mdash;that wandering and tormented thing,"<sup><a
+                ng-click="footnoteSeventeen = !footnoteSeventeen">17</a></sup>
         and at the end of the story a shadow stretches across the sky, a shadow
         over all of mankind.
     </p>
+
+    <div class="footnote" ng-show="footnoteSixteen">
+        <p>Southam, B.C. <i>A Guide to the
+            Selected Poems of T.S. Eliot</i>. San Diego: Harcourt Brace &amp;
+            Company, 1994. p. 216.
+
+        <p>
+    </div>
+    <div class="footnote" ng-show="footnoteSeventeen">
+        <p>Kimbrough, Robert, ed. <i>Joseph Conrad,
+            Heart of Darkness</i>. New York: W. W. Norton &amp; Company, 1988.
+            p. 65.
+
+        <p>
+    </div>
 </section>
 <section class="note" id="seventyseven" ng-show="vm.isVisible('seventyseven')">
     <h3>l. 77, l. 91</h3>
 
     <div class="quote">For Thine is the Kingdom</div>
 
-    <p>Part of the Lord's Prayer, as originally mentioned in I Chronicles
-        xxix.
+    <p>Part of the Lord's Prayer, as originally mentioned in 1 Chronicles
+        29.
     </p>
 </section>
 <section class="note" id="eightythree" ng-show="vm.isVisible('eightythree')">
@@ -768,22 +977,41 @@
 
     <div class="quote">This is the way the world ends</div>
 
-    <p>George Santayana lectured at Harvard while Eliot was a student
+    <div>George Santayana lectured at Harvard while Eliot was a student
         there. His account of the Divine Comedy included: "it all ends, not
-        with a bang, not with some casual incident, but in sustained reflection."<sup><font size=-2><a
-                href="Footnotes.htm#noteseightteen">18</a></font></sup>
-        The whimper could be in reference to two things: the Kipling poem, <a href="Quotes.htm#kipling">"Danny
-            Deever"</a>, with which Eliot is known to have been familier and Dante's
+        with a bang, not with some casual incident, but in sustained reflection."<sup><a
+                ng-click="footnoteEightteen = !footnoteEightteen">18</a></sup>
+        The whimper could be in reference to two things: the Kipling poem, <a ng-click="quotekipling = !quotekipling">"Danny
+            Deever,"</a>
+
+        <div class="inline-quote" ng-show="quotekipling">
+            <blockquote>'What's that whimpers of 'ead'' said Files-on-Parade<br/>
+                'It's Danny's soul that's passin' now,' the Colour Sergeant said.
+            </blockquote>
+            <p class="right">Rudyard Kipling, "<a href="http://www.poetryloverspage.com/poets/kipling/danny_deever.html"
+                                                  target="_blank">Danny
+                Deever</a>"</p>
+        </div>
+        with which Eliot is known to have been familier and Dante's
         description of a newborn baby's cry upon leaving one world to enter another.
         That in turns suggests the image of a repentant Dante standing before Beatrice
         as a child before as stern parent.
-    </p>
+    </div>
+    <br/>
 
     <p>The whimper is that Guy Fawkes exhaled when he gave up his co-conspirators,
         it is what Brutus and Cassius spoke when their plans to rule crumbled,
         it is Kurtz's last utterance when he finally realizes the truth of the
         world he lives in, and it is the end for all hollow men.
     </p>
+
+    <div class="footnote" ng-show="footnoteEightteen">
+        <p>Southam, B.C. <i>A Guide to the
+            Selected Poems of T.S. Eliot</i>. San Diego: Harcourt Brace &amp;
+            Company, 1994. p. 217.
+
+        <p>
+    </div>
 
 </section>
 </div>

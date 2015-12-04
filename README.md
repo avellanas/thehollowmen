@@ -9,19 +9,21 @@ The original, in all of its terrible c. 2000 html (frames!) is available at http
 
 - [x] Better solution to show selected note
 - [x] Clean up notes (make grammar, section heading consistent, etc)
-- [ ] Fix links
-  - [ ] To Quotes.htm
-  - [ ] To footnotes
-  - [ ] To external sites (open in new tab/window)
+- [x] Fix links
+  - [x] To Quotes.htm
+  - [x] To footnotes
+  - [x] To external sites (open in new tab/window)
   - [x] to original project
 
 ###Future Enhancements
 - [ ] Better mobile/responsive support
 - [ ] View all notes
-- [ ] Basic CD
+- [ ] Tests, CD
 - [ ] More text from original project
   - [ ] Bibliography
   - [ ] Citing info
+- [ ] Additional links, e.g. wikipedia or current top google hits
+- [ ] Link to specific parts or sections of external sources
 
 ## Structure
 Modeled off of [AngularJS Modular Demo](https://github.com/johnpapa/ng-demos/tree/master/modular)
