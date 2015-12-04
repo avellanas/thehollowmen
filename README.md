@@ -1,8 +1,20 @@
 #Hypertext Version of T.S. Eliot's *The Hollow Men*
 
-A long overdue update of the hypertext poem from my 2000 Oberlin College English Honors Thesis. 
+A long overdue update of the hypertext poem from my 2000 Oberlin College English Honors thesis. 
 
-The original, in all of its terrible c. 2000 html (frames!) is available at http://aduni.org/~heather/occs/honors/Poem.htm.
+The original, in all of its broken links and terrible c. 2000 html (frames!) is available at http://aduni.org/~heather/occs/honors/Poem.htm.
+
+##TODOs
+
+###Future Enhancements
+- [ ] Better mobile/responsive support
+- [ ] View all notes
+- [ ] Tests, CD
+- [ ] More text from original project
+  - [ ] Bibliography
+  - [ ] Citing info
+- [ ] Additional links, e.g. wikipedia or current top google hits
+- [ ] Link to specific parts or sections of external sources
 
 ## Structure
 Modeled off of [AngularJS Modular Demo](https://github.com/johnpapa/ng-demos/tree/master/modular)
@@ -74,10 +86,18 @@ Type `gulp test` to run the tests including both unit and midway tests (spins up
 Testing uses karma, mocha, chai, sinon, ngMidwayTester libraries.
 
 ### The Modules
+<<<<<<< HEAD
 The app has 2 feature modules and depends on a series of external modules and custom but cross-app modules
 
 ```
 app --> [
+=======
+The app has 3 feature modules and depends on a series of external modules and custom but cross-app modules
+
+```
+app --> [
+        app.poem
+>>>>>>> develop
         app.layout,
         app.core --> [
 			ngAnimate,
