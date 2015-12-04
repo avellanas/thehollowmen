@@ -71,6 +71,20 @@ h1 {
     color: lightgray;
 }
 
+.quote {
+    margin: 20px;
+    font-style: italic;
+    line-height: 1.4em;
+}
+
+.quote p {
+    margin: 0 0 0;
+}
+
+blockquote {
+    font-size: 14px;
+}
+
 .center {
     text-align: center;
 }
