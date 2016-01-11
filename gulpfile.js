@@ -134,6 +134,18 @@ gulp.task('vendorcss', function () {
 });
 
 /**
+ * Copy robots.txt and sitemap.xml to the build directory
+ */
+gulp.task('copy', function() {
+  var robots = paths.client + 'robots.txt';
+  var sitemap = paths.client + 'sitemap.xml';
+  
+  return gulp
+    .src([].concat(robots, sitemap))
+  .pipe(gulp.dest(paths.build));
+});
+
+/**
  * Inject all the files into the new index.html. Does not create revisions.
  * @return {Stream}
  */
@@ -225,7 +237,7 @@ gulp.task('rev-and-inject', ['js', 'vendorjs', 'css', 'vendorcss'], function () 
  * Build the optimized app
  * @return {Stream}
  */
-gulp.task('build', ['inject'], function () {
+gulp.task('build', ['copy', 'inject'], function () {
     log('Building the optimized app');
     return gulp.src('').pipe(plug.notify({
         onLast: true,
